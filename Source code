@@ -1,0 +1,369 @@
+////////////////////////////////HTML////////////////////////////////////////////////
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <video autoplay muted loop>
+        <source src="videoplayback (1).webm" />
+      </video>
+
+      <div class="header">
+        <div class="h1">Love</div>
+        <form id="search-form">
+          <input type="name" placeholder="SEARCH" id="search-box" />
+          <button id="but"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <div class="righttop">
+          <div class="righticon"><i class="fa-solid fa-user"></i></div>
+        </div>
+      </div>
+      <div class="mid">
+        <div class="block">
+          <ul id="search-result">
+            <h1 style="font-size: 100px">Search Image</h1>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="cs.js"></script>
+  </body>
+</html>
+//////////////////////////////////////////////////////////////CSS ////////////////////////////////////////
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+/* header part*/
+.header {
+  width: 1220px;
+  height: 80px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0.466),
+    rgba(255, 0, 0, 0.089),
+    rgba(137, 43, 226, 0.281),
+    rgba(19, 19, 19, 0.39),
+    rgba(0, 208, 255, 0.401),
+    rgba(255, 0, 111, 0.367),
+    rgba(137, 43, 226, 0.281),
+    rgba(255, 0, 0, 0.466)
+  );
+
+  background-size: 400%;
+  backdrop-filter: blur(30px);
+  border: 2px solid black;
+  margin-left: 65px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: animation 10s linear infinite;
+}
+
+@keyframes animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: center;
+  }
+  100% {
+    background-position: right;
+  }
+}
+.h1 {
+  width: 120px;
+  height: 50px;
+  background: linear-gradient(
+    to right,
+    rgb(255, 0, 0),
+    rgb(0, 26, 255),
+    rgb(106, 255, 0)
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: animation 10s linear infinite;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: "Times New Roman", Times, serif;
+}
+#search-form {
+  height: 40px;
+  width: 370px;
+  background-color: transparent;
+  display: flex;
+}
+
+#search-box {
+  height: 30px;
+  width: 390px;
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  background-color: rgb(15, 15, 15);
+  text-align: center;
+  color: antiquewhite;
+  font-size: 14px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  box-shadow: 0 0 30px #656969;
+}
+#but {
+  height: 34px;
+  width: 40px;
+  background-color: rgb(15, 15, 15);
+  margin-bottom: 0px;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  color: antiquewhite;
+  cursor: pointer;
+}
+
+.righttop {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.767);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* header part*/
+/*center container*/
+.mid {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.contain {
+  width: 700px;
+  height: 460px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.767);
+  margin-right: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.cent {
+  width: 500px;
+  height: 320px;
+  background-color: black;
+  background-size: cover;
+  border-radius: 10px;
+}
+.right {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.767);
+  margin-left: 50px;
+
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.right:hover {
+  box-shadow: 0px 0px 20px rgb(231, 4, 99);
+}
+#icon {
+  font-size: 30px;
+}
+#icon1 {
+  font-size: 30px;
+}
+
+.block {
+  width: 1000px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.158);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  box-shadow: 0px 0px 20px rgb(228, 165, 129);
+}
+
+#search-result {
+  width: 900px;
+  height: 350px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: X mandatory;
+}
+
+::-webkit-scrollbar {
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#642bff, #ff22e6);
+  border: 2px solid black;
+  border-radius: 9px;
+}
+
+img {
+  width: 300px;
+  height: 230px;
+  list-style-type: none;
+  background-size: cover;
+  scroll-snap-align: start;
+  margin-left: 14px;
+  border-radius: 4px;
+  object-fit: cover;
+  transition: all 0.1s linear;
+}
+
+img:hover {
+  width: 320px;
+  height: 300px;
+  box-shadow: 0px 0px 20px blueviolet;
+}
+/////////////////////////////////////////////////////////////Js//////////////////////////////////////////////////
+/*
+
+let a = document.querySelector(".cent");
+const imgs = document.querySelector("#box");
+
+let keyword = "";
+let page = 1;
+async function searchImage() {
+  keyword = a.value;
+  const url = `https://api.unsplash.com/search/collections?page=${page}&query=${keyword}&client_id=oTWULJ42Y_tHUsquIUSltfO9RHhJWR9JIQkyaQsOJpQ`;
+
+  const responce = await fetch(url);
+  const date = await responce.json();
+  const result = data.results;
+  result.map((result) => {
+    const image = document.createElement("img");
+    image.src = result.urls.small;
+    const imageLink = document.createElement("a");
+    imageLink.href = result.links.html;
+    imageLink.target = "_blank";
+
+    imageLink.appendChild(image);
+    imgs.appendChild(imageLink);
+  });
+
+  console.log(date);
+}
+
+let submit = document.querySelector("#but");
+let form = document.querySelector("#centertop");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  page = 1;
+  searchImage();
+});
+*/
+
+const searchform = document.getElementById("search-form");
+const searchbox = document.getElementById("search-box");
+const searchResult = document.getElementById("search-result");
+const more = document.getElementById("show-more-btn");
+
+const center = document.querySelector(".cent");
+const images = document.querySelector("img");
+
+searchbox.Value;
+let keyword = "";
+let page = 1;
+async function searchImage() {
+  keyword = searchbox.value;
+  const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=0MTAZfSPWy9oNMtAzUKbPrugdlY8fHPAJ9eBYGuzGBo`;
+  const responce = await fetch(url);
+  const data = await responce.json();
+
+  if (page === 1) {
+    searchResult.innerHTML = "";
+  }
+  const result = data.results;
+  result.map((result) => {
+    const image = document.createElement("img");
+    image.src = result.urls.small;
+    const imageLink = document.createElement("a");
+    imageLink.href = result.links.html;
+    imageLink.target = "_blank";
+
+    imageLink.appendChild(image);
+    searchResult.appendChild(imageLink);
+  });
+}
+
+searchform.addEventListener("submit", (e) => {
+  console.log("hello");
+  e.preventDefault();
+  page = 1;
+  searchImage();
+});
+
+const image = document.createElement("img");
+image.src = result.urls.small;
+const imageLink = document.createElement("a");
+imageLink.href = result.links.html;
+imageLink.target = "_blank";
+
+imageLink.appendChild(image);
+searchResult.appendChild(imageLink);
+center.appendChild(imageLink);
